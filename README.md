@@ -1,7 +1,6 @@
 # book-trading-website
-Boolean Project Week
 
- Project Week 
+ Boolean Project Week 
 
 For this project, your aim is to create a website of your choice, including most of the core concepts that you’ve learned along the way.
 
