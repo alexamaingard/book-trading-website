@@ -69,12 +69,12 @@ You may use json-server for this fetch requirement, but you may use any APIs out
 
  Suggestions 
 
-Practice working with forms, try and use a variety of different inputs:
+- Practice working with forms, try and use a variety of different inputs:
     - Text
     - Checkboxes
     - Select
 
-Practice working with event listeners, try and use a variety of events:
+- Practice working with event listeners, try and use a variety of events:
     - Click
     - Submit
     - Input
