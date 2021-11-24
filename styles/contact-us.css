@@ -1,0 +1,59 @@
+.contact-us-page,
+.contact-us-container,
+.contact-form {
+    display: grid;
+}
+
+.contact-us-page {
+    grid-template-rows: 100px 1fr;
+    gap: 200px;
+}
+
+.contact-us-container {
+    place-items: start center;
+}
+
+.contact-form {
+    width: 600px;
+    gap: 10px;
+}
+
+label {
+    font-size: 1.2rem;  
+}
+
+input[type="email"],
+input[type=text],
+textarea{
+    border: none;
+    border-radius: 3px;
+}
+
+input[type="email"],
+input[type=text]{
+    height: 30px;
+}
+
+textarea {
+    resize: none;
+    font-size: 1.1rem;
+}
+
+.action {
+    display: grid;
+    place-items: center;
+}
+
+.submit-form-btn {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ECE1D8;
+    font-size: 1rem;
+}
+
+textarea,
+.submit-form-btn {
+    font-family: 'Raleway', sans-serif;
+}

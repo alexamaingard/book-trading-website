@@ -1,0 +1,27 @@
+.about-us-main{
+    display: grid;
+    place-items: start center;
+}
+
+.about-us-container {
+    width: 70ch;
+    display: grid;
+    gap: 30px;
+}
+
+.about-us-info{
+    display: grid;
+    gap: 10px;
+}
+
+.about-us-container h2 {
+    font-size: 1.8rem;
+}
+
+.about-us-container h3 {
+    font-size: 1.6rem;
+}
+
+.about-us-info p {
+    font-size: 1rem;
+}

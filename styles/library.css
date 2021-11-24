@@ -1,0 +1,76 @@
+.user-bar,
+.search-bar-container,
+.add-book-container {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.user-bar {
+    gap: 80px;
+}
+
+#search-in-library,
+#add-to-library {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+}
+
+.books-container {
+    padding-top: 50px;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+}
+
+.book {
+    width: 700px;
+    height: 75px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    display: flex;
+    gap: 20px;
+}
+
+.book-info,
+.isbn {
+    height: 70px;
+    width: 200px;
+    display: grid;
+    place-content: end start;
+    gap: 3px;
+}
+
+.book-cover-small {
+    width: 50px;
+    height: 70px;
+}
+
+.isbn,
+.book-actions {
+    padding-left: 50px;
+}
+
+.book-actions {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.book-action {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    height: 30px;
+    width: 80px;
+    border: none;
+    background-color: #dac4b2;
+    border-radius: 20px;
+}
+
+.book-action:hover {
+    background-color: #F4EEE9;
+}

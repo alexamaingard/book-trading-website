@@ -1,12 +1,12 @@
 # book-trading-website
 
- Boolean Project Week 
+Boolean Project Week: 
 
 For this project, your aim is to create a website of your choice, including most of the core concepts that you’ve learned along the way.
 
 This is also going to be a chance for you to experience some of the ways in which a commercial project runs.
 
- Topic overview 
+*** TOPIC OVERVIEW ***
 
 - Navigation
     - Internal Link
@@ -27,17 +27,17 @@ This is also going to be a chance for you to experience some of the ways in whic
 - Add tasteful animation and typography
 - File structure
 
- Planning stage  
+*** PLANNING STAGE *** 
 
 - User or Job stories
 - File structure of your project
 
- Setup stage 
+*** SETUP STAGE ***
 
 - Set up a new project in GitHub, including a project page
-- Clone the project locally (edited)
-[11:13 AM]
- Minimum Requirements for Sign Off 
+- Clone the project locally 
+
+*** MINIMUM REQUIREMENTS FOR SIGNOFF ***
 
 - Consideration to HTML Semantics
     - The right HTML elements for the job
@@ -67,7 +67,7 @@ You may use json-server for this fetch requirement, but you may use any APIs out
 - You need to have an action function to update state
 - You need to have a render function to render a list of data
 
- Suggestions 
+*** SUGGESTIONS ***
 
 - Practice working with forms, try and use a variety of different inputs:
     - Text
@@ -79,3 +79,20 @@ You may use json-server for this fetch requirement, but you may use any APIs out
     - Submit
     - Input
     - Change
+
+
+# requirements for my project
+
+Ask for username -> store it in an internal server with it's data
+
+- Links:
+    - External links: Goodreads review of the selected book
+    - Internal links: User's library
+
+- APIs:
+    - Book information/details from API : https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=data&format=json
+    - Goodreads reference link: https://www.goodreads.com/book/show/....
+    - Description: https://www.googleapis.com/books/v1/volumes?q=isbn:9780451531056
+
+- Extra:
+    - Signup/login with a username and a password
