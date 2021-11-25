@@ -25,6 +25,7 @@ input[type=text]{
 
 .page-title {
     height: 100px;
+    text-align: center;
 }
 
 a {

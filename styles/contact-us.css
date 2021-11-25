@@ -57,3 +57,15 @@ textarea,
 .submit-form-btn {
     font-family: 'Raleway', sans-serif;
 }
+
+@media screen and (max-width: 630px){
+    .contact-form {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 548px){
+    .contact-form {
+        width: 450px;
+    }
+}
