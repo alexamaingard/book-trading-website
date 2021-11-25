@@ -12,7 +12,7 @@ h1 {
     font-size: 3.5rem;
 }
 
-h3{
+h3  {
     font-size: 1.3rem;
 }
 
@@ -33,7 +33,7 @@ a {
 }
 
 nav {
-    height: 8.5vh;
+    height: 110px;
     background-color: #dac4b2;
     display: flex;
     padding: 10px 20px;
@@ -42,7 +42,6 @@ nav {
 }
 
 #nav-logo {
-    width: 6vw;
     display: flex;
     justify-content: center;
 }
@@ -63,9 +62,9 @@ nav {
 }
 
 .page-links {
-    width: 15vw;
     height: 2vh;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .page-links a:hover {
@@ -74,15 +73,10 @@ nav {
 }
 
 main {
-    height: 88.5vh;
+    height: calc(100vh - 110px - 38.39px);
     background-image: linear-gradient(180deg, #dac4b2, white);
     padding: 30px 0;
     overflow-y: auto;
-}
-
-#book-wall {
-    width: 100vw;
-    opacity: 85%;
 }
 
 .main-page-container {
@@ -113,28 +107,19 @@ h1 {
 }
 
 footer {
-    height: 3vh;
+    height: 38.39px;
+    width: 100vw;
     background-color: #dac4b2; 
     color: black;
     display: flex;
     align-items: flex-end;
     position: fixed;
     bottom: 0;
+    justify-content: space-between;
 }
 
 .footer-left,
 .footer-right {
-    width: 50vw;
     padding: 10px;
     display: flex;
-}
-
-#logo-footer {
-    width: 30vw;
-    display: flex;
-    justify-content: left;
-}
-
-.footer-right {
-    justify-content: flex-end;
 }

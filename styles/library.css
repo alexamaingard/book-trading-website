@@ -1,7 +1,6 @@
 .user-bar,
 .search-bar-container,
 .add-book-container {
-    height: 70px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -29,7 +28,6 @@
     gap: 20px;
 }
 
-/* BOOK LIST */
 .book,
 .user {
     width: 700px;
@@ -41,6 +39,7 @@
     gap: 20px;
 }
 
+.book,
 .user {
     justify-content: space-between;
 }
@@ -49,15 +48,24 @@
     width: 200px;
 }
 
+.book-left{
+    gap: 10px;
+    align-items: center;
+}
+
+.book-left,
 .book-info,
 .isbn {
     height: 100px;
     width: 200px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 3px;
+}
 
+.book-info,
+.isbn {
+    flex-direction: column;
+    gap: 3px;
 }
 
 .book-cover-small {
@@ -92,7 +100,6 @@
     background-color: #F4EEE9;
 }
 
-
 .book-details-container {
     display: flex;
     justify-content: center;
@@ -116,4 +123,44 @@
 
 .book-cover-large {
     width: 304px;
+}
+
+@media screen and (max-width: 1275px) {
+    .user-bar{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .search-bar-container h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .book {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .isbn{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .book {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .add-book-container h3{
+        display: none;
+    }
+    .book {
+        width: 450px;
+    }
 }

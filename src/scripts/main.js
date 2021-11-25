@@ -374,6 +374,7 @@ const mainPage = document.querySelector('.sign-in-page-container');
 
 function renderBook(book, parentElement, dataSource){
     const bookDiv = createElementWithClass('div', 'book');
+    const leftDiv = createElementWithClass('div', 'book-left');
     const cover = createElementWithClass('img', 'book-cover-small');
     if(book.coverURLs){
         if(book.coverURLs.small === 'https://covers.openlibrary.org/b/id/None-S.jpg'){
@@ -424,7 +425,8 @@ function renderBook(book, parentElement, dataSource){
 
     bookActions.append(swapBtn, viewBtn);
     bookInfo.append(title, author);
-    bookDiv.append(cover, bookInfo, isbn, bookActions);
+    leftDiv.append(cover, bookInfo);
+    bookDiv.append(leftDiv, isbn, bookActions);
     parentElement.append(bookDiv);
 }
 
