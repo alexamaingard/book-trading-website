@@ -41,6 +41,14 @@ let swapState = {
     }
 };
 
+function setSwapState(newState){
+    swapState = {...state, ...newState};
+}
+
+function resetSwapState(){
+    setSwapState({selectedUser: {username: null, library: []}});
+}
+
 function setState(newState){
     state = {...state, ...newState};
 }
@@ -167,7 +175,6 @@ async function renderListOfUsers(){
     });
     const backBtn = createButtonElement('book-action', '', 'Back');
     backBtn.addEventListener('click', (event) => {
-        console.log(event.target);
         listOfUsersContainer.innerText = '';
         renderUserPage();
     })
@@ -207,7 +214,7 @@ async function pushBookToLibrary(book){
     state.library.push(bookId);
 }
 
-async function renderBooksInLibrary(parentElement, dataSource, filteredBooks, userBooks, userLibrary){
+async function renderBooksInLibrary(parentElement, dataSource){
     parentElement.innerText = '';
 
     const res = await fetch(librariesURL);
@@ -261,6 +268,7 @@ async function renderBooksInLibrary(parentElement, dataSource, filteredBooks, us
                 renderBook(book, parentElement, dataSource);
             });
         }
+
     }
 }
 
@@ -286,16 +294,24 @@ function renderUserPageAsGuest(){
         }
     });
 
+    renderBooksInLibrary(userLibrary, 'swap'); //, swapState, swapState.selectedUsersBooks, swapState.selectedUser.library
+    
     const clearFiltersBtn = createButtonElement('book-action', '', 'Clear');
     clearFiltersBtn.addEventListener('click', (event) => {
         swapState.filters.filteredBooks = [];
         renderUserPageAsGuest();
     });
 
-    renderBooksInLibrary(userLibrary, 'swap'); //, swapState, swapState.selectedUsersBooks, swapState.selectedUser.library
+    const backBtn = createButtonElement('book-action', '', 'Back');
+    backBtn.addEventListener('click', (event) => {
+        userLibrary.innerText = '';
+        h1.innerText = 'List of Users';
+        resetSwapState();
+        renderListOfUsers();
+    })
 
     searchBarContainer.append(clearFiltersBtn);
-    userLibrary.append(searchBarContainer);
+    userLibrary.append(searchBarContainer, backBtn);
     mainPage.append(h1, userLibrary);
 }
 
@@ -340,7 +356,7 @@ function renderUserLibrary(){
     return userLibrary;
 }
 
-function renderBookDetails(book, author, booksContainerElement){
+function renderBookDetails(book, author, booksContainerElement, dataSource){
     booksContainerElement.innerText = '';
 
     const bookDetailsContainer = createElementWithClass('div', 'book-details-container');
@@ -362,7 +378,12 @@ function renderBookDetails(book, author, booksContainerElement){
     const backButton = createButtonElement('book-action', '', 'Back');
     backButton.addEventListener('click', (event) => {
         booksContainerElement.innerText = '';
-        renderUserPage();
+        if(dataSource === 'state'){
+            renderUserPage();
+        }
+        else{
+            renderUserPageAsGuest();
+        }
     });
 
     infoContainer.append(title, authors, description);
@@ -411,6 +432,7 @@ function renderBook(book, parentElement, dataSource){
         if(dataSource === 'state'){
             swapState.toSwapISBN = event.target.id;
             parentElement.innerText = '';
+            document.querySelector('.page-title').innerText = 'List Of Users';
             renderListOfUsers();
         }
         else{
@@ -420,7 +442,13 @@ function renderBook(book, parentElement, dataSource){
 
     const viewBtn = createButtonElement('book-action', '', 'View');
     viewBtn.addEventListener('click', (event) => {
-        renderBookDetails(book, author.innerText, parentElement);
+        if(swapState.selectedUser.username){
+            renderBookDetails(book, author.innerText, parentElement, 'swap')
+        }
+        else{
+            renderBookDetails(book, author.innerText, parentElement, 'state');   
+        }
+
     });
 
     bookActions.append(swapBtn, viewBtn);
