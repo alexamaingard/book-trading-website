@@ -73,16 +73,52 @@ nav {
 }
 
 main {
-    height: calc(100vh - 110px - 38.39px);
+    height: calc(100vh - 110px - 42px);
     background-image: linear-gradient(180deg, #dac4b2, white);
     padding: 30px 0;
     overflow-y: auto;
 }
 
 .main-page-container {
-    display: grid;
-    grid-template-rows: 100px 600px 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/images/book-wall-3.jpg);
+    background-repeat: repeat-y;
+    background-size: 100vw;
+}
+
+.main-page-container div {
+    padding: 3rem;
+    background-color: #E8DACF;
+    width: 80vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vh;
+}
+
+.main-page-container h1 {
+    font-size: 5rem;
+}
+
+.main-page-container hr {
+    background-color: black;
+    height: 1px;
+    width: 40vw;
+}
+
+.main-page-container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.book-wall{
+    width: 100vw;
+    height: 350px;
 }
 
 .username-form {
@@ -107,7 +143,7 @@ h1 {
 }
 
 footer {
-    height: 38.39px;
+    height: 42px;
     width: 100vw;
     background-color: #dac4b2; 
     color: black;
