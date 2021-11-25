@@ -93,16 +93,17 @@ main {
     padding: 3rem;
     background-color: #E8DACF;
     width: 80vw;
-    height: 20vw;
+    height: 30vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 5vh;
+    text-align: center;
 }
 
 .main-page-container h1 {
-    font-size: 5rem;
+    font-size: 5vh;
 }
 
 .main-page-container hr {
@@ -112,7 +113,7 @@ main {
 }
 
 .main-page-container h2 {
-    font-size: 2rem;
+    font-size: 2vh;
     font-weight: 400;
 }
 
@@ -158,4 +159,27 @@ footer {
 .footer-right {
     padding: 10px;
     display: flex;
+}
+
+@media screen and (max-width: 998px){
+    .main-page-container h1 {
+        font-size: 4.5vh;
+    }
+    
+    .main-page-container h2 {
+        font-size: 1.8vh;
+    }
+
+    .main-page-container div {
+        height: 32.5vh;
+    }
+}
+
+@media screen and (max-width: 907px){
+    .main-page-container h1 {
+        font-size: 4vh;
+    }
+    .main-page-container div {
+        height: 35vh;
+    }
 }
