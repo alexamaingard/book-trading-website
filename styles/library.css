@@ -12,36 +12,52 @@
 }
 
 #search-in-library,
-#add-to-library {
+#add-to-library,
+#search-in-library-guest {
     width: 300px;
     height: 30px;
     border: none;
     border-radius: 3px;
 }
 
-.books-container {
+.books-container,
+.list-of-users,
+.user-library {
     padding-top: 50px;
     display: grid;
     place-items: center;
     gap: 20px;
 }
 
-.book {
+/* BOOK LIST */
+.book,
+.user {
     width: 700px;
-    height: 75px;
+    height: 100px;
     border-bottom: 1px solid black;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+
+.user {
+    justify-content: space-between;
+}
+
+.user h4{
+    width: 200px;
 }
 
 .book-info,
 .isbn {
-    height: 70px;
+    height: 100px;
     width: 200px;
-    display: grid;
-    place-content: end start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 3px;
+
 }
 
 .book-cover-small {
@@ -55,8 +71,9 @@
 }
 
 .book-actions {
-    padding-top: 30px;
+    height: 100px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 15px;
 }
@@ -73,4 +90,30 @@
 
 .book-action:hover {
     background-color: #F4EEE9;
+}
+
+
+.book-details-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.book-details-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.book-details-container h3 {
+    font-size: 1.4rem;
+}
+
+.book-details-container p {
+    width: 50ch;
+    text-align: justify;
+}
+
+.book-cover-large {
+    width: 304px;
 }
